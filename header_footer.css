@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+.header {position:relative; z-index:99; padding:23px 20px 0; height:80px; background:#1b2e4e; }
+.header:after {content: ""; clear: both; display: block;}
+.header h1 {float:left;}
+
+.header #gnb {float:left; margin-left:60px; height:40px; line-height:36px; }
+.header .depth0_li {position:relative; float: left; margin-right:36px; text-align:center;}
+
+.header .gnb_title {font-size:18px; font-weight: 500; transition:.2s;}
+.header .gnb_title:link, .header .gnb_title:visited {color:#fff;}
+.header .gnb_title:active, .header .gnb_title:hover, .header .gnb_title:focus {color:#f07723;}
+.header .depth1_gnb {opacity:0; transition:.2s; position:absolute; top:54px; left:-44px;  padding:15px; width:140px; background:#1b2e4e; border:2px solid #fff; border-radius: 10px; line-height: 2.4;}
+.header .depth1_gnb.show {opacity:1;}
+
+/* 말풍선 */
+.header .depth1_gnb:before {content:""; display:block; position:absolute; top:-14px; left:60px; width:0; border-width:0 14px 14px; border-style:solid; border-color: #fff transparent;} 
+.header .depth1_gnb:after {content:""; display:block; position:absolute; top:-10px; left:64px; width:0; border-width:0 10px 10px; border-style:solid; border-color: #1b2e4e transparent;}
+
+.util_btn {display:inline-block; width:94px; height:36px; border-radius: 4px; text-align:center; line-height: 36px; transition:.2s; color:#fff;}
+.util_btn:link, .util_btn:visited {background:none; border:1px solid #fff;}
+.util_btn:active, .util_btn:hover, .util_btn:focus {background:#f07723; border:none;} 
+
+.header #user_util {float:right;} 
+.header #user_util .util_btn {margin-left:10px;}
+.header .login_after {display: none;}
+
+.footer {margin-top:80px; padding:40px 0 66px; border-top:1px solid #ddd; text-align: center;}
+.footer .futil_li {display:inline-block; padding-right:20px;}
+.footer .futil_li:after {content:""; position:relative; left:12px; display:inline-block; width:1px; height:12px; background:#666;}
+.footer .futil_li:last-child {padding-right: 0;}
+.footer .futil_li:last-child:after {display:none;}
+.footer .futil_li a {color:#666;}
+.footer .futil_li .privacy {font-weight: 500;}
+.footer .company_info {margin:34px 0 20px; color:#666; font-size:14px;}
+.footer .company_num {margin-right:10px;}
+.footer address {line-height:1.6; color:#888; font-size:14px;}
+.footer address a {color:#888;}

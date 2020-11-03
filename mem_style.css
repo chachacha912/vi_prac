@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+/* === mem_regist === */
+.mem_regist {margin:100px auto; width: 740px;}
+.mem_regist .regist_list {margin:0 0 20px;}
+.mem_regist .regist_title {display:inline-block; width: 180px; line-height: 50px;}
+.mem_regist #registForm .essential {color:#ff0a0a;}
+.mem_regist #registForm .input_text {padding-left:10px; width: 550px; height: 50px; border: 1px solid #ddd; }
+.mem_regist #registForm .choose_list {display: inline-block; width: 90px;}
+.mem_regist #registForm .choose_list2 {margin-right:8px;}
+.mem_regist #registForm .choose_list input {margin-right: 8px;}
+.mem_regist #registForm #memberId {margin-right:6px; width:372px;}
+.mem_regist #registForm #cellNo1,.mem_regist #registForm #cellNo2, .mem_regist #registForm #cellNo3 {width:167px;} 
+.mem_regist #registForm .dash {margin:0 6px;}
+.mem_regist #registForm #zipNo {width:166px; background:#f9f9f9;}
+.mem_regist #registForm #addrBase {margin: 0 6px 10px; width:196px; background:#f9f9f9;}
+.mem_regist .choose_list {display: inline-block; height:50px; line-height:50px;}
+
+/* regist_cont 2줄이상일 경우 */
+.mem_regist .regist_list:after {content:""; clear:both; display:block;}
+.mem_regist .regist_title2 {float: left; margin-right:4px;}
+.mem_regist .regist_cont {float: left; width: 550px;}
+
+/* regist_title 2줄이상일 경우 */
+.mem_regist .title3 {padding-top:10px; line-height: 1.6;}
+.mem_regist .regist_title_additional {color:#888;}
+
+.mem_regist .signup_policy {margin-top:40px; padding-top: 50px; border-top:1px solid #888;}
+.mem_regist .signup_policy .policy_list {margin-bottom: 40px;}
+.mem_regist .signup_policy input {margin-right: 6px;}
+.mem_regist .signup_policy .policy {overflow: auto; margin: 16px 0; padding:14px; height: 160px; border:1px solid #ddd; font-size: 14px; line-height:1.6; color:#888;}
+.mem_regist .btn_center {margin-top:60px; text-align: center;}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="common_style.css">
+  <link rel="stylesheet" href="header_footer.css">
+  <link rel="stylesheet" href="mem_style.css">
+</head>
+<body>
+  <header class="header">
+    <h1><a href="#none"><img src="logo_white.png" alt="비젼인크라우드"></a></h1>
+    <ul id="gnb">
+      <li class="depth0_li">
+        <a href="#none" class="gnb_title">프로젝트 조회</a>
+      </li>
+      <li class="depth0_li">
+        <a href="#none" class="gnb_title">프로젝트 개설</a>
+      </li>
+      <li class="depth0_li">
+        <a href="#none" class="gnb_title">이용안내</a>
+        <ul class="depth1_gnb">
+          <li class="depth1_li"><a href="#none" class="gnb_title">플랫폼 소개</a></li>
+          <li class="depth1_li"><a href="#none" class="gnb_title">공지사항</a></li>
+          <li class="depth1_li"><a href="#none" class="gnb_title">자주하는 질문</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div id="user_util">
+      <div class="login_before">
+        <a href="#none" class="util_btn">회원가입</a>
+        <a href="#none" class="util_btn">로그인</a>
+      </div>
+      <div class="login_after">
+        <a href="#none" class="util_btn">마이페이지</a>
+        <a href="#none" class="util_btn">로그아웃</a>
+      </div>
+    </div>
+  </header>
+  <section id="content_title">
+		<h3>회원가입</h3>
+	</section>
+	<section id="content" class="mem_regist">
+		<h2>회원가입 양식</h2>
+		<form id="registForm">
+      <ul>
+        <li class="regist_list">
+          <span class="regist_title">
+            <label for="memberNm">
+              이름
+              <span class="essential">*</span>
+            </label>
+          </span>
+          <input type="text" id="memberNm" name="memberNm" class="input_text"/>
+        </li>
+        <li class="regist_list">
+          <span class="regist_title">성별</span>
+          <span class="choose_list"><input type="radio" id="man" name="sex" value="M"><label for="man">남자</label></span>
+          <span class="choose_list"><input type="radio" id="woman" name="sex" value="F"><label for="woman">여자</label></span>
+        </li>
+        <li class="regist_list">
+          <span class="regist_title">연령</span>
+          <span class="choose_list"><input type="radio" id="age10" name="age" value="1"><label for="age10">10대</label></span>
+          <span class="choose_list"><input type="radio" id="age20" name="age" value="2"><label for="age20">20대</label></span>
+          <span class="choose_list"><input type="radio" id="age30" name="age" value="3"><label for="age30">30대</label></span>
+          <span class="choose_list"><input type="radio" id="age40" name="age" value="4"><label for="age40">40대</label></span>
+          <span class="choose_list"><input type="radio" id="age50" name="age" value="5"><label for="age50">50대 이상</label></span>
+        </li>
+        <li class="regist_list">
+          <span class="regist_title">
+            <label for="email">
+              이메일주소
+              <span class="essential">*</span>
+            </label>
+          </span>
+          <input type="email" id="email" name="email" class="input_text"/>	
+        </li>
+        <li class="regist_list">
+          <span class="regist_title">
+            <label for="memberId">
+              아이디
+              <span class="essential">*</span>
+            </label>
+          </span>
+          <input type="text" id="memberId" name="memberId" class="input_text"/>
+          <a href="#none" class="check_btn">중복확인</a>
+        </li>
+        <li class="regist_list">
+          <span class="regist_title">
+            <label for="password">
+              비밀번호
+              <span class="essential">*</span>
+            </label>
+          </span>
+          <input type="password" id="password" name="password" class="input_text"/>		
+        </li>
+        <li class="regist_list">
+          <span class="regist_title">
+            <label for="pw_confirm">
+              비밀번호 확인
+              <span class="essential">*</span>
+            </label>
+          </span>
+          <input type="password" id="pw_confirm" name="password_confirm" class="input_text"/>		
+        </li>
+        <li class="regist_list">
+          <span class="regist_title">
+            <label for="cellNo">
+              휴대전화번호
+              <span class="essential">*</span>
+            </label>
+          </span>
+          <input type="tel" id="cellNo1" name="cellNo1" class="input_text"/>
+          <span class="dash">&#45;</span>	
+          <input type="tel" id="cellNo2" name="cellNo2" class="input_text"/>	
+          <span class="dash">-</span>	
+          <input type="tel" id="cellNo3" name="cellNo3" class="input_text"/>	
+        </li>
+        <li class="regist_list">
+          <span class="regist_title regist_title2">
+            <label for="zipNo">
+              주소
+              <span class="essential">*</span>
+            </label>
+          </span>
+          <div class="regist_cont">
+            <input type="text" id="zipNo" name="zipNo" class="input_text" readonly/>
+            <input type="text" id="addrBase" name="addrBase" class="input_text" readonly/>
+            <a href="javascript:openDaumPostcode(fn_addrCall);" class="check_btn">우편번호검색</a>
+            <input type="text" id="addrDetail" name="addrDetail" placeholder="상세주소" class="input_text"/>
+          </div>
+        </li>
+        <li class="regist_list">
+          <span class="regist_title regist_title2 title3">
+            <label for="upRole">
+              이용 프로젝트
+              <span class="essential">*</span>
+              <p class="regist_title_additional">(중복선택가능)</p>
+            </label>
+          </span>
+          <div class="regist_cont">
+            <span class="choose_list"><input type="checkbox" id="upRole" name="upRole" value="10"/><label for="upRole">수집</label></span>
+            <span class="choose_list"><input type="checkbox" id="clearRole" name="clearRole" value="20"/><label for="clearRole">정제</label></span>
+            <span class="choose_list"><input type="checkbox" id="editRole" name="editRole" value="30"/><label for="editRole">가공</label></span>
+            <span class="choose_list choose_list2"><input type="checkbox" id="upVerifyRole" name="upVerifyRole" value="11"/><label for="upVerifyRole">수집검수</label></span>
+            <span class="choose_list"><input type="checkbox" id="clearVerifyRole" name="clearVerifyRole" value="21"/><label for="clearVerifyRole">정제검수</label></span>
+            <span class="choose_list"><input type="checkbox" id="editVerifyRole" name="editVerifyRole" value="31"/><label for="editVerifyRole">가공검수</label></span>
+            <!-- <input type="checkbox" id="systemRole" value="90"/>시스템관리자권한 -->
+            <!-- <input type="checkbox" id="verifyRole" value="91"/>2차검수 -->
+          </div>
+        </li>
+      </ul>
+      <div class="signup_policy">
+        <div class="policy_list">
+          <input type="checkbox" id="isAgree1" name="isAgree1" value="Y"/>
+          <label for="isAgree1">서비스 이용약관에 동의합니다. (필수)</label>
+          <div class="policy">
+          aiworks 이용약관제 1조 (목적)
+          이 약관은 ㈜테스트웍스("회사" 또는 "테스트웍스")가 제공하는 aiworks 및 aiworks 관련 제반 서비스의 이용과 관련하여 회사와 회원과의 권리․의무 및 책임사항을 규정함을 목적으로 합니다.
+          제 2조 (정의)
+          이 약관에서 사용하는 용어의 정의는 다음과 같습니다.
+          "회사"라 함은 "서비스" 산업과 관련된 경제활동을 영위하는 자로서 서비스 및 제반 서비스를 제공하는 자를 말합니다.
+          "서비스"라 함은 구현되는 단말기(PC, TV, 휴대형 단말기 등의 각종 유무선 장치를 포함)와 상관없이 "회원"이 이용할 수 있는 aiworks 및 aiworks 관련 제반 서비스를 의미합니다.
+          "이용자"란 회사의 "서비스"에 접속하여 이 약관에 따라 "회사"가 제공하는 서비스를 받는 회원 및 비회원을 말합니다.
+          "회원"이라 함은 회사의 "서비스"에 접속하여 이 약관에 따라 회원등록을 한 자로서, 계속적으로 "회사"가 제공하는 서비스를 이용할 수 있는 고객을 말합니다.
+          "비회원"이라 함은 회원에 가입하지 않고 "회사"가 제공하는 서비스를 이용하는 자를 말합니다.
+          "아이디(ID)"라 함은 "회원"의 식별과 "서비스" 이용을 위하여 "회원"임을 확인하고 비밀보호를 위해 "회원" 자신이 정한 문자 또는 숫자의 조합을 의미합니다.
+          "비밀번호(Password)"라 함은 "회원"이 부여 받은 "아이디와 일치되는 "회원"임을 확인하고 비밀보호를 위해 "회원" 자신이 정한 문자, 숫자, 또는 특수문자의 조합을 의미합니다.
+          "포인트"라 함은 서비스의 효율적 이용을 위해 회사가 임의로 책정 또는 지급, 조정할 수 있는 재산적 가치가 없는 "서비스" 상의 가상 데이터를 의미합니다.
+          "게시물"이라 함은 "회원"이 "서비스"를 이용함에 있어 "서비스"상에 게시한 부호·문자·음성·음향·회상·동영상 등의 정보 형태의 글, 사진, 동영상 및 각종 파일과 링크 등을 의미합니다.
+          </div>
+        </div>
+        <div class="policy_list">
+          <input type="checkbox" id="isAgree2" name="isAgree2"value="Y"/>
+          <label for="isAgree2">개인정보 수집 및 이용에 동의합니다. (필수)</label>
+          <div class="policy">
+          aiworks 이용약관제 1조 (목적)
+          이 약관은 ㈜테스트웍스("회사" 또는 "테스트웍스")가 제공하는 aiworks 및 aiworks 관련 제반 서비스의 이용과 관련하여 회사와 회원과의 권리․의무 및 책임사항을 규정함을 목적으로 합니다.
+          제 2조 (정의)
+          이 약관에서 사용하는 용어의 정의는 다음과 같습니다.
+          "회사"라 함은 "서비스" 산업과 관련된 경제활동을 영위하는 자로서 서비스 및 제반 서비스를 제공하는 자를 말합니다.
+          "서비스"라 함은 구현되는 단말기(PC, TV, 휴대형 단말기 등의 각종 유무선 장치를 포함)와 상관없이 "회원"이 이용할 수 있는 aiworks 및 aiworks 관련 제반 서비스를 의미합니다.
+          "이용자"란 회사의 "서비스"에 접속하여 이 약관에 따라 "회사"가 제공하는 서비스를 받는 회원 및 비회원을 말합니다.
+          "회원"이라 함은 회사의 "서비스"에 접속하여 이 약관에 따라 회원등록을 한 자로서, 계속적으로 "회사"가 제공하는 서비스를 이용할 수 있는 고객을 말합니다.
+          "비회원"이라 함은 회원에 가입하지 않고 "회사"가 제공하는 서비스를 이용하는 자를 말합니다.
+          "아이디(ID)"라 함은 "회원"의 식별과 "서비스" 이용을 위하여 "회원"임을 확인하고 비밀보호를 위해 "회원" 자신이 정한 문자 또는 숫자의 조합을 의미합니다.
+          "비밀번호(Password)"라 함은 "회원"이 부여 받은 "아이디와 일치되는 "회원"임을 확인하고 비밀보호를 위해 "회원" 자신이 정한 문자, 숫자, 또는 특수문자의 조합을 의미합니다.
+          "포인트"라 함은 서비스의 효율적 이용을 위해 회사가 임의로 책정 또는 지급, 조정할 수 있는 재산적 가치가 없는 "서비스" 상의 가상 데이터를 의미합니다.
+          "게시물"이라 함은 "회원"이 "서비스"를 이용함에 있어 "서비스"상에 게시한 부호·문자·음성·음향·회상·동영상 등의 정보 형태의 글, 사진, 동영상 및 각종 파일과 링크 등을 의미합니다.
+          </div>
+        </div>
+      </div>
+    </form>
+    <p class="btn_center">
+      <a href="javascript:fn_regist();" class="end_btn">가입완료</a>
+    </p>
+  </section>
+  <footer class="footer">
+    <ul id="footer_util">
+      <li class="futil_li"><a href="#none">이용약관</a></li>
+      <li class="futil_li"><a href="#none" class="privacy">개인정보처리방침</a></li>
+    </ul>
+    <div class="company_info">
+      <span class="company_num">사업자등록번호 : 123-45-67890</span>
+      <span>대표 : 김학일</span>
+    </div>
+      <address>
+          <p>(우 08505)서울특별시 금천구 디지털로 121</p>
+          <p>가산동 에이스가산타워 704호/809호</p>
+          <p>대표번호 : <a href="tel:0230167956">02-3016-7956</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이메일 : <a href="mailto:admin@vision-in.co.kr">admin@vision-in.co.kr</a></p>
+      </address>
+  </footer>
+</body>
+</html>
