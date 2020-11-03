@@ -64,5 +64,5 @@ h2 {position: absolute; left:-9999px;}
 .end_btn:hover, .end_btn:active, .end_btn:focus {font-weight: 500;}
 
 /* sub page 공통 */
-#content_title {width:100%; height: 15.625vw; background: url("./title_bg.png") no-repeat; background-size: contain; line-height: 15.625vw;}
+#content_title {width:100%; height: 15.625vw; background: url("./img/title_bg.png") no-repeat; background-size: contain; line-height: 15.625vw;}
 #content_title h3 {text-align: center; color:#fff; font-size: 44px; font-weight: bold;}

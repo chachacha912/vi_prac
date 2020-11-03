@@ -1,0 +1,139 @@
+<? include "header.html" ?> <!--php 구문--> 
+ 
+  <section id="content_title">
+		<h3>회원가입</h3>
+	</section>
+	<section id="content" class="mem_regist">
+		<h2>회원가입 양식</h2>
+		<form id="registForm">
+      <ul>
+        <li class="regist_list">
+          <span class="regist_title">
+            <label for="memberNm">
+              이름
+              <span class="essential">*</span>
+            </label>
+          </span>
+          <input type="text" id="memberNm" name="memberNm" class="input_text"/>
+        </li>
+        <li class="regist_list">
+          <span class="regist_title">성별</span>
+          <span class="choose_list"><input type="radio" id="man" name="sex" value="M"><label for="man">남자</label></span>
+          <span class="choose_list"><input type="radio" id="woman" name="sex" value="F"><label for="woman">여자</label></span>
+        </li>
+        <li class="regist_list">
+          <span class="regist_title">연령</span>
+          <span class="choose_list"><input type="radio" id="age10" name="age" value="1"><label for="age10">10대</label></span>
+          <span class="choose_list"><input type="radio" id="age20" name="age" value="2"><label for="age20">20대</label></span>
+          <span class="choose_list"><input type="radio" id="age30" name="age" value="3"><label for="age30">30대</label></span>
+          <span class="choose_list"><input type="radio" id="age40" name="age" value="4"><label for="age40">40대</label></span>
+          <span class="choose_list"><input type="radio" id="age50" name="age" value="5"><label for="age50">50대 이상</label></span>
+        </li>
+        <li class="regist_list">
+          <span class="regist_title">
+            <label for="email">
+              이메일주소
+              <span class="essential">*</span>
+            </label>
+          </span>
+          <input type="email" id="email" name="email" class="input_text"/>	
+        </li>
+        <li class="regist_list">
+          <span class="regist_title">
+            <label for="memberId">
+              아이디
+              <span class="essential">*</span>
+            </label>
+          </span>
+          <input type="text" id="memberId" name="memberId" class="input_text"/>
+          <a href="#none" class="check_btn">중복확인</a>
+        </li>
+        <li class="regist_list">
+          <span class="regist_title">
+            <label for="password">
+              비밀번호
+              <span class="essential">*</span>
+            </label>
+          </span>
+          <input type="password" id="password" name="password" class="input_text"/>		
+        </li>
+        <li class="regist_list">
+          <span class="regist_title">
+            <label for="pw_confirm">
+              비밀번호 확인
+              <span class="essential">*</span>
+            </label>
+          </span>
+          <input type="password" id="pw_confirm" name="password_confirm" class="input_text"/>		
+        </li>
+        <li class="regist_list">
+          <span class="regist_title">
+            <label for="cellNo">
+              휴대전화번호
+              <span class="essential">*</span>
+            </label>
+          </span>
+          <input type="tel" id="cellNo1" name="cellNo1" class="input_text"/>
+          <span class="dash">&#45;</span>	
+          <input type="tel" id="cellNo2" name="cellNo2" class="input_text"/>	
+          <span class="dash">-</span>	
+          <input type="tel" id="cellNo3" name="cellNo3" class="input_text"/>	
+        </li>
+        <li class="regist_list">
+          <span class="regist_title regist_title2">
+            <label for="zipNo">
+              주소
+              <span class="essential">*</span>
+            </label>
+          </span>
+          <div class="regist_cont">
+            <input type="text" id="zipNo" name="zipNo" class="input_text" readonly/>
+            <input type="text" id="addrBase" name="addrBase" class="input_text" readonly/>
+            <a href="javascript:openDaumPostcode(fn_addrCall);" class="check_btn">우편번호검색</a>
+            <input type="text" id="addrDetail" name="addrDetail" placeholder="상세주소" class="input_text"/>
+          </div>
+        </li>
+        <li class="regist_list">
+          <span class="regist_title regist_title2 title3">
+            <label for="upRole">
+              이용 프로젝트
+              <span class="essential">*</span>
+              <p class="regist_title_additional">(중복선택가능)</p>
+            </label>
+          </span>
+          <div class="regist_cont">
+            <span class="choose_list"><input type="checkbox" id="upRole" name="upRole" value="10"/><label for="upRole">수집</label></span>
+            <span class="choose_list"><input type="checkbox" id="clearRole" name="clearRole" value="20"/><label for="clearRole">정제</label></span>
+            <span class="choose_list"><input type="checkbox" id="editRole" name="editRole" value="30"/><label for="editRole">가공</label></span>
+            <span class="choose_list choose_list2"><input type="checkbox" id="upVerifyRole" name="upVerifyRole" value="11"/><label for="upVerifyRole">수집검수</label></span>
+            <span class="choose_list"><input type="checkbox" id="clearVerifyRole" name="clearVerifyRole" value="21"/><label for="clearVerifyRole">정제검수</label></span>
+            <span class="choose_list"><input type="checkbox" id="editVerifyRole" name="editVerifyRole" value="31"/><label for="editVerifyRole">가공검수</label></span>
+            <!-- <input type="checkbox" id="systemRole" value="90"/>시스템관리자권한 -->
+            <!-- <input type="checkbox" id="verifyRole" value="91"/>2차검수 -->
+          </div>
+        </li>
+      </ul>
+      <div class="signup_policy">
+        <div class="policy_list">
+          <input type="checkbox" id="isAgree1" name="isAgree1" value="Y"/>
+          <label for="isAgree1">서비스 이용약관에 동의합니다. (필수)</label>
+          <div class="policy">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A maiores eius dolore, quod, natus nobis excepturi veritatis laborum, molestiae dolorem accusamus ullam inventore sunt quaerat aliquid ad et sequi fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. A maiores eius dolore, quod, natus nobis excepturi veritatis laborum, molestiae dolorem accusamus ullam inventore sunt quaerat aliquid ad et sequi fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. A maiores eius dolore, quod, natus nobis excepturi veritatis laborum, molestiae dolorem accusamus ullam inventore sunt quaerat aliquid ad et sequi fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. A maiores eius dolore, quod, natus nobis excepturi veritatis laborum, molestiae dolorem accusamus ullam inventore sunt quaerat aliquid ad et sequi fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. A maiores eius dolore, quod, natus nobis excepturi veritatis laborum, molestiae dolorem accusamus ullam inventore sunt quaerat aliquid ad et sequi fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. A maiores eius dolore, quod, natus nobis excepturi veritatis laborum, molestiae dolorem accusamus ullam inventore sunt quaerat aliquid ad et sequi fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. A maiores eius dolore, quod, natus nobis excepturi veritatis laborum, molestiae dolorem accusamus ullam inventore sunt quaerat aliquid ad et sequi fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. A maiores eius dolore, quod, natus nobis excepturi veritatis laborum, molestiae dolorem accusamus ullam inventore sunt quaerat aliquid ad et sequi fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. A maiores eius dolore, quod, natus nobis excepturi veritatis laborum, molestiae dolorem accusamus ullam inventore sunt quaerat aliquid ad et sequi fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. A maiores eius dolore, quod, natus nobis excepturi veritatis laborum, molestiae dolorem accusamus ullam inventore sunt quaerat aliquid ad et sequi fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. A maiores eius dolore, quod, natus nobis excepturi veritatis laborum, molestiae dolorem accusamus ullam inventore sunt quaerat aliquid ad et sequi fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. A maiores eius dolore, quod, natus nobis excepturi veritatis laborum, molestiae dolorem accusamus ullam inventore sunt quaerat aliquid ad et sequi fugit! 
+          </div>
+        </div>
+        <div class="policy_list">
+          <input type="checkbox" id="isAgree2" name="isAgree2"value="Y"/>
+          <label for="isAgree2">개인정보 수집 및 이용에 동의합니다. (필수)</label>
+          <div class="policy">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A maiores eius dolore, quod, natus nobis excepturi veritatis laborum, molestiae dolorem accusamus ullam inventore sunt quaerat aliquid ad et sequi fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. A maiores eius dolore, quod, natus nobis excepturi veritatis laborum, molestiae dolorem accusamus ullam inventore sunt quaerat aliquid ad et sequi fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. A maiores eius dolore, quod, natus nobis excepturi veritatis laborum, molestiae dolorem accusamus ullam inventore sunt quaerat aliquid ad et sequi fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. A maiores eius dolore, quod, natus nobis excepturi veritatis laborum, molestiae dolorem accusamus ullam inventore sunt quaerat aliquid ad et sequi fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. A maiores eius dolore, quod, natus nobis excepturi veritatis laborum, molestiae dolorem accusamus ullam inventore sunt quaerat aliquid ad et sequi fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. A maiores eius dolore, quod, natus nobis excepturi veritatis laborum, molestiae dolorem accusamus ullam inventore sunt quaerat aliquid ad et sequi fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. A maiores eius dolore, quod, natus nobis excepturi veritatis laborum, molestiae dolorem accusamus ullam inventore sunt quaerat aliquid ad et sequi fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. A maiores eius dolore, quod, natus nobis excepturi veritatis laborum, molestiae dolorem accusamus ullam inventore sunt quaerat aliquid ad et sequi fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. A maiores eius dolore, quod, natus nobis excepturi veritatis laborum, molestiae dolorem accusamus ullam inventore sunt quaerat aliquid ad et sequi fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. A maiores eius dolore, quod, natus nobis excepturi veritatis laborum, molestiae dolorem accusamus ullam inventore sunt quaerat aliquid ad et sequi fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. A maiores eius dolore, quod, natus nobis excepturi veritatis laborum, molestiae dolorem accusamus ullam inventore sunt quaerat aliquid ad et sequi fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. A maiores eius dolore, quod, natus nobis excepturi veritatis laborum, molestiae dolorem accusamus ullam inventore sunt quaerat aliquid ad et sequi fugit! 
+          </div>
+        </div>
+      </div>
+    </form>
+    <p class="btn_center">
+      <a href="javascript:fn_regist();" class="end_btn">가입완료</a>
+    </p>
+  </section>
+  
+
+<? include "footer.html" ?>
